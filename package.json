@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreaKzero/friendly-node-cron",
+  },
   "scripts": {
     "pretty": "prettier ./ --write --single-quote",
     "test:watch": "TESTWATCH=true nodemon ./test.js",
