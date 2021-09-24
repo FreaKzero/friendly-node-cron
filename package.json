@@ -8,8 +8,8 @@
     "test:watch": "TESTWATCH=true nodemon ./test.js",
     "test": "node ./test.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "pete@freakzero.com",
+  "license": "MIT",
   "devDependencies": {
     "node-cron": "^3.0.0",
     "nodemon": "^2.0.12",
