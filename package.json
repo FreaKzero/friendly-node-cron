@@ -1,0 +1,16 @@
+{
+  "name": "friendly-node-cron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:watch": "TESTWATCH=true nodemon ./test.js",
+    "test": "node ./test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-cron": "^3.0.0",
+    "nodemon": "^2.0.12"
+  }
+}
