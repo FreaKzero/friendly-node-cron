@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretty": "prettier ./ --write --single-quote",
     "test:watch": "TESTWATCH=true nodemon ./test.js",
     "test": "node ./test.js"
   },
@@ -11,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "node-cron": "^3.0.0",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.1"
   }
 }

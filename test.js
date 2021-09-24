@@ -1,5 +1,5 @@
 const translate = require('./index');
-const assert = require('assert')
+const assert = require('assert');
 const cron = require('node-cron');
 
 const test = (check, should) => {
@@ -7,16 +7,16 @@ const test = (check, should) => {
   const expr = translate(check);
 
   if (expr !== null) {
-    const checkexpr = cron.validate(expr)
+    const checkexpr = cron.validate(expr);
     if (!checkexpr) {
       throw new Error('Cron Expression invalid');
     }
   }
   assert.equal(expr, should);
   console.log(new Array(100).fill('=').join(''));
-}
+};
 
-test('at 2:30','0 30 2 * * *');
+test('at 2:30', '0 30 2 * * *');
 test('on thursdays at 2:30', '0 30 2 * * 4');
 test('on saturdays', '0 0 0 * * 6');
 test('every 8 hours', '0 0 */8 * * *');
@@ -41,5 +41,6 @@ test('every fri mon wed in oct at 10:30', '0 30 10 * 10 1,3,5');
 test('very mondays in december all 15 minutes', '0 */15 * * 12 1');
 
 if (process.env.TESTWATCH) {
-  process.stdout.write("\u001b[3J\u001b[2J\u001b[1J");console.clear();
+  process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');
+  console.clear();
 }
