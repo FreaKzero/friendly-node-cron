@@ -13,10 +13,10 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn
-      - run: yarn test
+      - run: npm install
+      - run: npm run test
       - name: Semantic Release
-        run: yarn release
+        run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

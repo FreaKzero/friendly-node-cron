@@ -5,13 +5,13 @@ Inspired by https://github.com/jkriss/friendly-cron
 How to install:
 
 ```
-yarn install friendly-node-cron
+npm install friendly-node-cron
 ```
 
 Usage:
 
 ```
-const {translate} = require('friendly-node-cron');
+const translate = require('friendly-node-cron');
 const cron = require('node-cron');
 
 cron.schedule(translate('at 9:04:52 every mondays in december'), () => {
