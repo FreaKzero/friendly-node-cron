@@ -45,12 +45,18 @@ You can also write the full words like `on saturday at 9:30`
 
 `mon, tue, wed, thu, fri, sat, sun, weekends, workdays`
 
+Examples:
+
+```
+on mon tue wed every 15 minutes 
+in december on mondays and saturdays at 9:30
+on mondays at 10:30
+```
+
 ## Dates/Months:
 
 You can either use exact dates like `in dec 9 at 9:30` or only months `in dec at 9:30`
-
 You can also write the full words like `in december at 9:30`
-
 ### Tokens
 
 `jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec`
