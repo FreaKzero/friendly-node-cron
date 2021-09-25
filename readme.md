@@ -43,7 +43,7 @@ You can also write the full words like `on saturday at 9:30`
 
 ### Tokens
 
-`mon, tue, wed, thu, fri, sat, weekends, workdays`
+`mon, tue, wed, thu, fri, sat, sun, weekends, workdays`
 
 ## Dates/Months:
 
