@@ -13,14 +13,12 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-
-      - uses: ferluisxd/create-npmrc@3
-        with:
-          auth_token: ${{ secrets.NPM_TOKEN }}
       - run: npm install
       - run: npm run test
       - name: Semantic Release
         run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
