@@ -39,6 +39,12 @@ test('at 9:10 every year', '0 10 9 1 1 *');
 test('at 9:10 every year on saturdays', '0 10 9 1 1 *');
 test('every fri mon wed in oct at 10:30', '0 30 10 * 10 1,3,5');
 test('very mondays in december all 15 minutes', '0 */15 * * 12 1');
+test('on jan feb mar at 9:30', '0 30 9 * 1,2,3 *');
+test(
+  'on jan feb mar only mondays tuesdays and saturdays at 9:30',
+  '0 30 9 * 1,2,3 1,2,6'
+);
+test('on jan feb every 45 minutes', '0 */45 * * 1,2 *');
 
 if (process.env.TESTWATCH) {
   process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');
