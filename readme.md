@@ -48,7 +48,7 @@ You can also write the full words like `on saturday at 9:30`
 Examples:
 
 ```
-on mon tue wed every 15 minutes 
+on mon tue wed every 15 minutes
 in december on mondays and saturdays at 9:30
 on mondays at 10:30
 ```
@@ -58,6 +58,7 @@ on mondays at 10:30
 You can either use exact dates like `in dec 9 at 9:30` or only months `in dec at 9:30`
 You can also write the full words like `in december at 9:30`
 Multiple Months are supported
+
 ### Tokens
 
 `jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec`
@@ -68,6 +69,7 @@ Examples:
 on jan feb mar only mondays tuesdays and saturdays at 9:30
 on dec mar apr at 13:37
 ```
+
 ## Times:
 
 Times will get sanitized and seconds are optional, to use times the token _at_ is needed. Timeformat is 24 hours and not AM/PM.

@@ -52,7 +52,9 @@ const dateParser = (pattern, string) => {
     /(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec) ([0-9]{1,2})/.exec(
       string
     );
-  const monthMatch = string.match(/(\d+)? (jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/g);
+  const monthMatch = string.match(
+    /(\d+)? (jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/g
+  );
   const months = [
     '',
     'jan',
@@ -73,9 +75,9 @@ const dateParser = (pattern, string) => {
     pattern[3] = full[2];
     pattern[4] = months.indexOf(full[1]);
   } else if (monthMatch) {
-    const mon = monthMatch.map((i) =>
-        months.indexOf(i.trim())
-    ).sort((a, b) => a - b);
+    const mon = monthMatch
+      .map((i) => months.indexOf(i.trim()))
+      .sort((a, b) => a - b);
     if (mon.length) {
       pattern[4] = mon.join(',');
     }
