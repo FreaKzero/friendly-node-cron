@@ -9,7 +9,7 @@ const test = (check, should) => {
   if (expr !== null) {
     const checkexpr = cron.validate(expr);
     if (!checkexpr) {
-      throw new Error('Cron Expression invalid');
+      throw new Error(`Expression invalid - ${expr}`);
     }
   }
   assert.equal(expr, should);
@@ -45,6 +45,12 @@ test(
   '0 30 9 * 1,2,3 1,2,6'
 );
 test('on jan feb every 45 minutes', '0 */45 * * 1,2 *');
+test(
+  'every 15 minutes from 5 through 15 of december and january',
+  '0 */15 * 5-15 1,12 *'
+);
+//test('every week in 15 minute intervals on january',  '0 */15 * */7 1 *');
+//test('every week on january',  '0 0 0 */7 1 *');
 
 if (process.env.TESTWATCH) {
   process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');

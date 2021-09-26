@@ -48,6 +48,7 @@ const dayParser = (pattern, string) => {
 };
 
 const dateParser = (pattern, string) => {
+  const from = /from\s([0-9]{1,2})\sthrough\s([0-9]{1,2})/.exec(string);
   const full =
     /(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec) ([0-9]{1,2})/.exec(
       string
@@ -81,6 +82,11 @@ const dateParser = (pattern, string) => {
     if (mon.length) {
       pattern[4] = mon.join(',');
     }
+  }
+
+  if (!full && from) {
+    pattern[3] = `${from[1]}-${from[2]}`;
+    pattern[5] = '*';
   }
 
   return pattern;
