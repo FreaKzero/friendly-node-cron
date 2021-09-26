@@ -4,7 +4,7 @@
 
 ![publish](https://github.com/FreaKzero/friendly-node-cron/actions/workflows/publish.yml/badge.svg)
 
-Friendlier, human readable expressions for node-cron
+Friendlier, human readable expressions for node-cron  
 Inspired by https://github.com/jkriss/friendly-cron
 
 How to install:
