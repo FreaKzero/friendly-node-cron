@@ -55,19 +55,22 @@ on mondays at 10:30
 
 ## Dates/Months:
 
-You can either use exact dates like `in dec 9 at 9:30` or only months `in dec at 9:30`
-You can also write the full words like `in december at 9:30`
-Multiple Months are supported
+You can either use exact dates like `in dec 9 at 9:30` or only months `in dec at 9:30`  
+You can also write the full words like `in december at 9:30`  
+Multiple Months are supported  
+You can also use the expression `from <num> through <num>` to define a day interval
 
 ### Tokens
 
 `jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec`
+`from <num> through <num>`
 
 Examples:
 
 ```
 on jan feb mar only mondays tuesdays and saturdays at 9:30
 on dec mar apr at 13:37
+on march and april from 15 through 25 on every 2 hours
 ```
 
 ## Times:

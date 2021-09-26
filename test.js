@@ -49,6 +49,13 @@ test(
   'every 15 minutes from 5 through 15 of december and january',
   '0 */15 * 5-15 1,12 *'
 );
+test(
+  'on march and april from 15 through 25 on every 2 hours',
+  '0 0 */2 15-25 3,4 *'
+);
+
+
+
 //test('every week in 15 minute intervals on january',  '0 */15 * */7 1 *');
 //test('every week on january',  '0 0 0 */7 1 *');
 
@@ -56,3 +63,4 @@ if (process.env.TESTWATCH) {
   process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');
   console.clear();
 }
+
