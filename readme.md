@@ -97,7 +97,8 @@ Be sure when you want to use intervals that you dont use the _at_ token in your 
 ### Tokens:
 
 `second, minute, hour, day, month`  
-Examples:  
+
+Examples:
 
 ```
 on Saturdays every 15 minutes
@@ -105,10 +106,24 @@ on december every 1 hour
 every 12 hours
 ```
 
-### Year
+### Special Tokens 
 
-Every year is a special rule which will set the Crontab to first on january and its not possible to use a weekday for this expression.
+## Year
+Always will run on first of january at 0:00 if no time is given.  
+Weekdays are not possible with this expression and will be overwritten.
 
+Examples:  
 ```
+every year
 every year at 9:30
+```
+
+## Weekly
+Weekly will run on every 7th day of month (*/7) at 0:00 if no time is given.
+Weekdays are not possible with this expression and will be overwritten.
+
+Examples:  
+```
+weekly at 9:30
+weekly in 15 minute intervals on january
 ```

@@ -54,8 +54,10 @@ test(
   '0 0 */2 15-25 3,4 *'
 );
 
-//test('every week in 15 minute intervals on january',  '0 */15 * */7 1 *');
-//test('every week on january',  '0 0 0 */7 1 *');
+test('weekly in 15 minute intervals on january', '0 */15 * */7 1 *');
+test('weekly on january', '0 0 0 */7 1 *');
+test('weekly at 9:30:15', '15 30 9 */7 * *');
+test('weekly at 9:30', '0 30 9 */7 * *');
 
 if (process.env.TESTWATCH) {
   process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');
