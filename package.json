@@ -1,7 +1,7 @@
 {
   "name": "friendly-node-cron",
   "version": "1.2.0",
-  "description": "",
+  "description": "Friendlier, human readable expressions for node-cron",
   "main": "index.js",
   "repository": {
     "type": "git",

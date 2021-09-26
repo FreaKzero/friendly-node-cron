@@ -1,5 +1,10 @@
 # Friendly Node Cron
 
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
+![publish](https://github.com/FreaKzero/friendly-node-cron/actions/workflows/publish.yml/badge.svg)
+
+Friendlier, human readable expressions for node-cron
 Inspired by https://github.com/jkriss/friendly-cron
 
 How to install:
@@ -62,7 +67,7 @@ You can also use the expression `from <num> through <num>` to define a day inter
 
 ### Tokens
 
-`jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec`
+`jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec`  
 `from <num> through <num>`
 
 Examples:
@@ -91,8 +96,8 @@ Be sure when you want to use intervals that you dont use the _at_ token in your 
 
 ### Tokens:
 
-`second, minute, hour, day, month`
-Examples:
+`second, minute, hour, day, month`  
+Examples:  
 
 ```
 on Saturdays every 15 minutes
