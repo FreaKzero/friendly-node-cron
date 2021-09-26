@@ -1,5 +1,5 @@
 const langParser = (pattern, string) => {
-  const matchyear = /year/.test(string);
+  const matchyear = /yearly/.test(string);
   const matchweek = /weekly/.test(string);
   if (matchyear) {
     return pattern.map((e, idx) => {

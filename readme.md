@@ -108,14 +108,14 @@ every 12 hours
 
 ### Special Tokens 
 
-## Year
+## Yearly
 Always will run on first of january at 0:00 if no time is given.  
 Weekdays are not possible with this expression and will be overwritten.
 
 Examples:  
 ```
-every year
-every year at 9:30
+yearly
+yearly at 9:30
 ```
 
 ## Weekly
