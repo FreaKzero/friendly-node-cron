@@ -1,6 +1,7 @@
 const langParser = (pattern, string) => {
   const matchyear = /yearly/.test(string);
   const matchweek = /weekly/.test(string);
+  const matchquarter = /quarterly/.test(string);
   if (matchyear) {
     return pattern.map((e, idx) => {
       if ([3, 4].indexOf(idx) > -1) {
@@ -18,7 +19,7 @@ const langParser = (pattern, string) => {
     pattern[3] = '*/7';
     let changed = false;
     return pattern.map((e, idx) => {
-      if (idx < 4 && e === '*' && !changed) {
+      if (idx < 3 && e === '*' && !changed) {
         return 0;
       } else if (idx === 5) {
         return '*';
@@ -28,6 +29,17 @@ const langParser = (pattern, string) => {
     });
   }
 
+  if (matchquarter) {
+    pattern[4] = '*/3';
+    let changed = false;
+    return pattern.map((e, idx) => {
+      if (idx < 3 && e === '*' && !changed) {
+        return 0;
+      }
+      changed = true;
+      return e;
+    });
+  }
   return pattern;
 };
 

@@ -96,7 +96,7 @@ Be sure when you want to use intervals that you dont use the _at_ token in your 
 
 ### Tokens:
 
-`second, minute, hour, day, month`  
+`second, minute, hour, day, month`
 
 Examples:
 
@@ -106,24 +106,40 @@ on december every 1 hour
 every 12 hours
 ```
 
-### Special Tokens 
+### Special Tokens
 
 ## Yearly
+
 Always will run on first of january at 0:00 if no time is given.  
 Weekdays are not possible with this expression and will be overwritten.
 
-Examples:  
+Examples:
+
 ```
 yearly
 yearly at 9:30
 ```
 
 ## Weekly
-Weekly will run on every 7th day of month (*/7) at 0:00 if no time is given.
+
+Weekly will run on every 7th day of month (\*/7) at 0:00 if no time is given.  
 Weekdays are not possible with this expression and will be overwritten.
 
-Examples:  
+Examples:
+
 ```
 weekly at 9:30
 weekly in 15 minute intervals on january
+```
+
+## Quarterly
+
+Quarterly will run on every 3rd month of year (\*/3) at 0:00 if no time is given.  
+Weekdays are possible
+
+Examples:
+
+```
+quarterly at 9:30
+quarterly at 9:30 on mondays
 ```
