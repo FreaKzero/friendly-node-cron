@@ -36,10 +36,6 @@ translate('invalid expr');
 
 # Speech Rules
 
-Keyword `/(\s*?)at\s/` decides if an exact time (e.g: 09:40:31) is used or an interval (e.g: every hour, all 20 seconds, etc), seconds in exact times are optional.
-
-Keyword `year` sets the pattern automatically to first of january. Day of weeks can not be used with year.
-
 ## Days:
 
 Days will always translate in numbers. `weekends` translates to `6,7` and workdays will translate to `1,2,4,5`.
@@ -106,9 +102,9 @@ on december every 1 hour
 every 12 hours
 ```
 
-### Special Tokens
+## Special Tokens
 
-## Yearly
+### Yearly
 
 Always will run on first of january at 0:00 if no time is given.  
 Weekdays are not possible with this expression and will be overwritten.
@@ -120,7 +116,7 @@ yearly
 yearly at 9:30
 ```
 
-## Weekly
+### Weekly
 
 Weekly will run on every 7th day of month (\*/7) at 0:00 if no time is given.  
 Weekdays are not possible with this expression and will be overwritten.
@@ -132,7 +128,7 @@ weekly at 9:30
 weekly in 15 minute intervals on january
 ```
 
-## Quarterly
+### Quarterly
 
 Quarterly will run on every 3rd month of year (\*/3) at 0:00 if no time is given.  
 Weekdays are possible
