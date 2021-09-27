@@ -51,9 +51,9 @@ const dayParser = (pattern, string) => {
   if (daymatch) {
     const day = daymatch[0].trim();
     if (day === 'workdays') {
-      pattern[5] = '1,2,3,4,5';
+      pattern[5] = '1-5';
     } else if (day === 'weekends') {
-      pattern[5] = '6,7';
+      pattern[5] = '6,0';
     } else {
       const days = daymatch.map((i) =>
         ['', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'].indexOf(i.trim())

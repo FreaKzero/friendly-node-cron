@@ -25,8 +25,8 @@ test('every 15 minutes on dec 24', '0 */15 * 24 12 *');
 test('every 15 minutes on wednesdays', '0 */15 * * * 3');
 test('on saturdays at 0:10', '0 10 0 * * 6');
 test('every 1 hour on dec 24', '0 0 */1 24 12 *');
-test('every 3 hours on workdays', '0 0 */3 * * 1,2,3,4,5');
-test('every 12 hours on weekends', '0 0 */12 * * 6,7');
+test('every 3 hours on workdays', '0 0 */3 * * 1-5'); // => 1-5
+test('every 12 hours on weekends', '0 0 */12 * * 6,0'); // => should be 6,0
 test('every 20 seconds mondays tuesdays wednesdays', '*/20 * * * * 1,2,3');
 test('at 13:37 on fridays tuesdays and thursdays', '0 37 13 * * 2,4,5');
 test('at 9:00 on fri tue and mon', '0 0 9 * * 1,2,5');
