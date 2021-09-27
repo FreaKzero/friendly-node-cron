@@ -5,6 +5,8 @@
 [![NPM](https://nodei.co/npm/friendly-node-cron.png)](https://nodei.co/npm/friendly-node-cron/)
 
 Friendlier, human readable expressions for node-cron  
+Cron Expressions are doublechecked with [crontab.guru](https://crontab.guru/)
+
 Inspired by https://github.com/jkriss/friendly-cron
 
 How to install:
@@ -34,11 +36,29 @@ translate('invalid expr');
 // Also all Patterns which are resulting in '* * * * * *' will automatically return null.
 ```
 
+# Tested complex examples
+Look into [./test.js](https://github.com/FreaKzero/friendly-node-cron/blob/main/test.js) for more examples and the parsed cron expressions.
+
+```
+at 00:00 on dec 24
+every 20 seconds mondays tuesdays wednesdays
+at 13:37 on fridays tuesdays and thursdays
+At 12:10 on Monday and Tuesday in December
+onN saturDas In deCmbeR aT 06:01
+at 9:04:52 every mondays in december
+on saturdays every 10 minutes
+very mondays in december all 15 minutes
+on jan feb mar only mondays tuesdays and saturdays at 9:30
+every 15 minutes from 5 through 15 of december and january
+on march and april from 15 through 25 on every 2 hours
+weekly in 15 minute intervals on january
+quarterly at 9:30 on mondays
+```
 # Speech Rules
 
 ## Days:
 
-Days will always translate in numbers. `weekends` translates to `6,7` and workdays will translate to `1,2,4,5`.
+Days will always translate in numbers. `weekends` translates to `6,0` and workdays will translate to `1-5`.
 
 You can also write the full words like `on saturday at 9:30`
 
