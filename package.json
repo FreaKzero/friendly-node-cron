@@ -1,6 +1,6 @@
 {
   "name": "friendly-node-cron",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Friendlier, human readable expressions for node-cron",
   "main": "index.js",
   "homepage": "https://github.com/FreaKzero/friendly-node-cron#readme",
