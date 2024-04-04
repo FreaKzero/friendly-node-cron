@@ -148,6 +148,19 @@ weekly at 9:30
 weekly in 15 minute intervals on january
 ```
 
+### Monthly
+
+Monthly will run on every first day of month (\*/1) at 0:00 if no time or day is given.
+Weekdays are possible
+
+Examples:
+
+```
+monthly on fidays at 9:30
+monthly at 10:30
+monthly in 30 minute intervals
+```
+
 ### Quarterly
 
 Quarterly will run on every 3rd month of year (\*/3) at 0:00 if no time is given.  

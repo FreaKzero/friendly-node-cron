@@ -58,8 +58,18 @@ test('weekly in 15 minute intervals on january', '0 */15 * */7 1 *');
 test('weekly on january', '0 0 0 */7 1 *');
 test('weekly at 9:30:15', '15 30 9 */7 * *');
 test('weekly at 9:30', '0 30 9 */7 * *');
+
 test('quarterly', '0 0 0 * */3 *');
 test('quarterly at 9:30 on mondays', '0 30 9 * */3 1');
+
+test('monthly', '0 0 0 1 */1 *');
+test('monthly on tuesdays', '0 0 0 * */1 2');
+test('monthly on fridays at 9:30', '0 30 9 * */1 5');
+test('monthly at 10:30', '0 30 10 1 */1 *');
+test('monthly in 30 minute intervals', '0 */30 * 1 */1 *');
+
+
+
 
 if (process.env.TESTWATCH) {
   process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');

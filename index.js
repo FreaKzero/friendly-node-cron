@@ -1,6 +1,7 @@
 const langParser = (pattern, string) => {
   const matchyear = /yearly/.test(string);
   const matchweek = /weekly/.test(string);
+  const matchmonth = /monthly/.test(string);
   const matchquarter = /quarterly/.test(string);
   if (matchyear) {
     return pattern.map((e, idx) => {
@@ -23,6 +24,19 @@ const langParser = (pattern, string) => {
         return 0;
       } else if (idx === 5) {
         return '*';
+      }
+      changed = true;
+      return e;
+    });
+  }
+
+  if (matchmonth) {
+    pattern[4] = '*/1';
+    pattern[3] = pattern[5] !== '*' ? '*' : '1';
+    let changed = false;
+    return pattern.map((e, idx) => {
+      if (idx < 3 && e === '*' && !changed) {
+        return 0;
       }
       changed = true;
       return e;
